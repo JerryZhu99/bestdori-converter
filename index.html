@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestdori osu!mania Converter</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Exo 2', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container pt-4">
+    <h1>osu!mania to Bestdori Chart Converter</h1>
+    <div class="row pt-4">
+      <div class="col-8">
+        <h2>Convert</h2>
+        <form>
+          <div class="form-group">
+            <label for="fileInput">File input</label>
+            <input type="file" class="form-control-file" id="fileInput">
+          </div>
+          <div class="form-group">
+            <label>Input .osu File</label>
+            <textarea class="form-control" name="inputData" id="inputData"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Output BestDori JSON</label>
+            <textarea class="form-control" name="outputData" id="outputData"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Error Log</label>
+            <textarea class="form-control" name="errorData" id="errorData"></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-4">
+        <h3>Options</h3>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" checked="true" id="convertHolds">
+          <label class="form-check-label" for="convertHolds">
+            Convert Holds
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flickFinishes">
+          <label class="form-check-label" for="flickFinishes">
+            Convert Finishes to Flicks
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/timingpoint.js"></script>
+  <script src="src/hitobject.js"></script>
+  <script src="src/osufile.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

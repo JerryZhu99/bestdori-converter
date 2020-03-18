@@ -70,14 +70,12 @@ class HitObject {
     ].join(",");
   }
 }
-exports.HitObject = HitObject;
 
 class HitCircle extends HitObject {
   constructor(x = 256, y = 192, time = 0, type = 1, hitSound = 0, extras = "0:0:0:0:") {
     super(x, y, time, type, hitSound, extras);
   }
 }
-exports.HitCircle = HitCircle;
 
 
 class Slider extends HitObject {
@@ -111,7 +109,6 @@ class Slider extends HitObject {
     return arr.join(",");
   }
 }
-exports.Slider = Slider;
 
 class Spinner extends HitObject {
   constructor(x = 256, y = 192, time = 0, type = 8, hitSound = 0, endTime = 0, extras = "0:0:0:0:") {
@@ -130,7 +127,6 @@ class Spinner extends HitObject {
     ].join(",");
   }
 }
-exports.Spinner = Spinner;
 
 class HoldNote extends HitObject {
   constructor(x = 256, y = 192, time = 0, type = 128, hitSound = 0, endTime = 0, extras = "0:0:0:0:") {
@@ -148,4 +144,3 @@ class HoldNote extends HitObject {
     ].join(",");
   }
 }
-exports.HoldNote = HoldNote;

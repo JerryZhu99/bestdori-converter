@@ -49,4 +49,3 @@ class TimingPoint {
     )
   }
 }
-exports.TimingPoint = TimingPoint;

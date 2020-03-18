@@ -1,7 +1,3 @@
-const fs = require("fs");
-const path = require("path");
-const { TimingPoint } = require("./timingpoint");
-const { HitObject, HitCircle, Slider, Spinner, HoldNote } = require("./hitobject");
 class OsuFile {
   /**
    * Reads an .osu file asynchronously.
@@ -178,21 +174,9 @@ class OsuFile {
   toString() {
     return this.lines.join("\n");
   }
-
-  generateOsu() {
-    return new Promise((resolve, reject) => {
-      const filename = path.join(this.songsDirectory, this.dirname, this.filename);
-      fs.writeFile(filename, this.toString(), (err) => {
-        if (err)
-          return reject(err);
-        resolve();
-      });
-    });
-  }
   clone() {
     const copy = new OsuFile(null, this.filename, this.dirname, this.songsDirectory);
     copy.lines = this.lines.slice();
     return copy;
   }
 }
-exports.OsuFile = OsuFile;
