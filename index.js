@@ -35,7 +35,7 @@ const toSlide = (lane, beat, pos, other) => ({ "type": "Note", "note": "Slide", 
   let lastA = 0;
   let lastB = 0;
 
-  const snapDivisor = 12;
+  const snapDivisor = 48;
 
   for (let object of file.getHitObjects()) {
     const lane = Math.round(7 * object.x / 512 + 0.5);
